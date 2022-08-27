@@ -1,0 +1,14 @@
+@mixin before {
+    margin-left: 9px;
+    position: relative;
+    vertical-align: top;
+    left: -0.35em;
+    bottom: 3px;
+}
+@mixin after {
+        position: relative;
+        vertical-align: top;
+        bottom: 3px;
+        margin-left: 77px;
+    
+}

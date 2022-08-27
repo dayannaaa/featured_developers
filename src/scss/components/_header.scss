@@ -1,0 +1,44 @@
+.svg-icon {
+  max-height: 689px;
+  min-height: 337px;
+  width: 100%;
+}
+
+.selector {
+  color: red;
+
+  @include respond-to("small") {
+    color: blue;
+  }
+}
+*, *:after, *:before {
+   box-sizing: border-box;
+   padding: 0;
+   margin: 0;
+   transition: .5s ease-in-out;
+}
+  p::selection,
+    h4::selection,
+    h3::selection,
+    h2::selection{
+      color: rgb(146, 18, 18); 
+
+    }
+body {
+   font-family: 'Open Sans', arial, sans-serif;
+   background: #000000;
+    scrollbar-color: rgb(2, 47, 60);
+    scrollbar-width: thin;
+}
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: rgb(0, 0, 0);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.641);
+    border: 3px solid transparent;
+    border-radius: 10px;
+    background-clip: content-box;
+
+}

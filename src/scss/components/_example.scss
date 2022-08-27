@@ -1,0 +1,116 @@
+$color_h2:#fff;
+$color_h3:#E5E5E5;
+$border: 1px solid red;
+
+@for $i from 1 through 6 {
+  .item-#{$i} {
+    background-image: url("../img/picture/#{$i}.svg");
+  }
+}
+
+.wrapper{
+   margin: 0 auto;
+   padding: 0 15px;
+   background: #000000;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.text{
+    margin-top: 52px;
+    margin-left: 120px;
+    margin-right: 120px ;
+    h2{
+        color: $color_h2;
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 48px;
+    }
+    h3{
+        color: $color_h3;
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 31px;
+    }
+
+}
+.photo_developers_wrapper{
+    margin-left: 120px;
+    .item{
+        width: 282px;
+        height: 304px;
+        border-radius: 5px;
+        margin: 14px 12px;
+    }
+    .photo_container{
+    width: 100%;
+    display: flex;
+    @include flex;
+    flex-wrap: wrap;
+    }
+    margin-top: 67px;
+
+}
+@media (max-width: 750px) {
+    .text{
+        text-align: center;
+        align-items: center;
+    }
+}
+.shadow:hover{
+    height: 100%;
+    margin-top: 0;
+    color: #e5e5e5;
+}
+
+.shadow{
+position: relative;
+width: 282px;
+height: 75px;
+background: rgba(9, 7, 7, 0.4);
+backdrop-filter: blur(25px);
+border-radius: 0px 0px 5px 5px;
+margin-top:230px;
+z-index: 1;
+cursor: pointer;
+
+
+    h4{
+position: absolute;
+font-weight: 500;
+font-size: 20px;
+line-height: 24px;
+color: #FFFFFF;
+margin-left: 20px;
+padding-top: 9px;
+    }
+    p{
+position: absolute;
+margin-top: 42px;
+margin-left: 9px;
+font-weight: 400;
+font-size: 14px;
+line-height: 17px;
+color: #FFFFFF;
+}
+
+    @for $i from 1 through 6 {
+    .icons-#{$i} p::before{
+    content: url(../img/icons/#{$i}.svg);
+    @include before;
+    }
+    }
+
+
+    @for $i from 1 through 6 {
+    .icons-#{$i} p::after{
+    content: url(../img/picture/Vector.svg);
+    @include after;
+    }
+    }
+
+}
+
+@include button;
+
